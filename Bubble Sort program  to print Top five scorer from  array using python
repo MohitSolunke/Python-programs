@@ -1,0 +1,13 @@
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr)-1-i):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1] = arr[j+1],arr[j]
+    return arr
+
+persentage = [56.3,89.2,75.4,90.5,81.6,40.4]
+print(bubble_sort(persentage))
+
+sorted_persentage = bubble_sort(persentage)
+print("Top five Scorer :")
+print(sorted_persentage[-5:])
