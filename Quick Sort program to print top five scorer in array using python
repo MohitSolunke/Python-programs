@@ -1,0 +1,13 @@
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+
+    return quick_sort(left) + quick_sort(middle) + quick_sort(right)
+
+score = [65.5,75.3,82.1,90.00,60.4,55.7,72.2,85.5]
+sorted_score = quick_sort(score)
+print(sorted_score[-5:])
