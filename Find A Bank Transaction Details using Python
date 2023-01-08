@@ -1,0 +1,18 @@
+def deposit(ammount): 
+global B 
+B=B+ammount 
+ 
+def withdrow(ammount): 
+global B 
+if B>=ammount: B=B-ammount 
+print("Transaction is Successful !") 
+else: 
+print("Transaction is Not Possible.") 
+List=[] 
+B=0 while True: 
+Data=input("Enter Your Transation Detail:-") if Data=="Exit" or Data=="exit": break 
+List.append(Data.split()) print(List) for i in List: 
+if i[0]=='D': deposit(int(i[1])) 
+elif i[0]=='W': 
+withdrow(int(i[1])) 
+print(B) 
