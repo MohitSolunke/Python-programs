@@ -1,0 +1,70 @@
+def display(mat, r, c): 
+  for i in range(r): 
+    for j in range(c): print(mat[i][j], end=" ") 
+  print() 
+def read(mat, r, c): 
+  for i in range(r): 
+  a = [] for j in range(c): 
+  a.append(int(input())) 
+  mat.append(a) 
+def addition(mat1, mat2, mat3, r1, c1, r2, c2): 
+  if r1 != r2 or c1 != c2: 
+  print("addition not possible")  
+  return 
+  mat3.append(s) 
+  print("addition of 2 matrix is: ") display(mat3, r1, c1) 
+def substract(mat1, mat2, mat3, r1, c1, r2, c2 ): 
+  if r1 != r2 or c1 != c2: 
+  print("addition not possible") 
+  return 
+  for i in range(r1): 
+  s = [] 
+  for j in range(c1): 
+    s.append(mat1[i][j] - mat2[i][j]) 
+    mat3.append(s) 
+    print("substraction of matrix is: ") 
+    display(mat3, r1, c1) 
+ 
+def multiply(mat1, mat2, mat3, r1, r2, c1, c2): 
+  if c1 != r2: print("multiplication is not possible") 
+  return 
+  for i in range(r1):
+    a =[] for j in range(c2): 
+    s = 0 
+    for k in range(r2):
+    s += (mat1[i][k] * mat2[k][j]) 
+    a.append(s) 
+    mat3.append(a) 
+    print("multiplication matrix is: ") 
+    display(mat3, r1, c2) 
+def transpose(mat1, r1, c1, t): 
+  for i in range(r1): 
+    a = [] 
+    for j in range(c1): 
+      a.append(mat1[j][i]) 
+    t.append(a) 
+    display(t, r1, c1) 
+ 
+rows1 = int(input("enter number of rows of matrix1: ")) 
+cols1 = int(input("enter number of columns of matrix1: ")) 
+rows2 = int(input("enter number of rows of matrix2: ")) 
+cols2 = int(input("enter number of columns of matrix2: ")) 
+mat1 = [] 
+mat2 = []
+mat3 = [] 
+sub = [] 
+mult = [] 
+t1 =[] 
+t2 =[]
+print("input of matrix1: ") 
+read(mat1, rows1, cols1)
+print("input of matrix2: ") 
+read(mat2, rows2, cols2)
+addition(mat1, mat2, mat3, rows1, cols1, rows2, cols2)
+substract(mat1, mat2, sub, rows1, cols1, rows2, cols2) 
+multiply(mat1, mat2, mult, rows1, rows2, cols1, cols2)
+print("Tranpose of matrix1 is:") 
+transpose(mat1, rows1, cols1, t1)
+print("Transpose of the Matrix2 is:") 
+transpose(mat2, rows2, cols2, t2) 
+
