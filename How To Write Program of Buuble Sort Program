@@ -1,0 +1,29 @@
+def Bubble(arr,n):
+    i = 0
+    for i in range(n-1):
+        for j in range(0,n-i-1):
+            if arr[j] >arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+                
+        print("\n Pass#",(i+1))
+        print(arr)
+        
+print("\n Program for Bubble Sort")
+print("\n Enter the size of an array")
+n=int(input())
+array = []
+
+i = 0
+for i in range(n):
+    print("/n Enter the element in Array")
+    item = int(input())
+    array.append(item)
+    
+print("/n Original Array is :-")
+print(array)
+
+print("/n Bubble Sort Array :-")
+Bubble(array,n)
+                    
